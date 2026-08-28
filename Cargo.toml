@@ -11,5 +11,10 @@ publish = false
 # ONLY the zero-dep acquisition-scheme leaf: sciex-io builds an AcquisitionScheme through its public API
 # and never touches ms-io/Arrow/Parquet — the smallest possible R9 seam. Path dep (timsim-types unpublished).
 timsim-types = "0.1.0"
-# private, on legal hold — legal here because sciex-io is never published to crates.io.
-sciexwiff = { git = "https://github.com/theGreatHerrLebert/sciexwiff", rev = "ef7c0cd7e59d3b51160e446cbe3af240d230668d" }
+# Bumped 2026-08-28 from ef7c0cd7 (2026-06-09), which PREDATED sciexwiff having any license at all —
+# so this crate was building against an all-rights-reserved rev. c07d530 carries the MIT LICENSE, the
+# NOTICE (copyright + no-SDK + no-redistributed-data + SCIEX trademark disclaimer) and the README
+# provenance section, i.e. the full release hygiene thermorawfile already ships.
+#
+# Still on branch `feature/wiffscan-codec`, not main — settle that before the repo goes public.
+sciexwiff = { git = "https://github.com/theGreatHerrLebert/sciexwiff", rev = "c07d53092626ece26a241665679689efcac4bdb7" }
