@@ -1,0 +1,7 @@
+# Rust build output. Not carried by `git subtree split` from rustims, whose ignore rules lived at
+# the monorepo root -- the same gap let 3,933 target/ files into a commit in the tims-viewer repo.
+/target
+
+# Editor / OS noise.
+**/*.rs.bk
+.DS_Store
