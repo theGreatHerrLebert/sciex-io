@@ -4,7 +4,11 @@ version = "0.1.0"
 edition = "2021"
 rust-version = "1.84"
 license = "MIT"
-description = "SCIEX .wiff acquisition-scheme reader on top of timsim-types. Rustims-local (private sciexwiff dep); not published until sciexwiff is cleared."
+description = "SCIEX .wiff acquisition-scheme reader on top of timsim-types."
+repository = "https://github.com/theGreatHerrLebert/sciex-io"
+# NOT because sciexwiff is unlicensed — that was cleared 2026-07-22 (MIT) and this crate now pins the
+# revision carrying the LICENSE, NOTICE and provenance section. It is because crates.io refuses any
+# crate with a `git` dependency: sciexwiff must itself be published to crates.io before this can be.
 publish = false
 
 [dependencies]
@@ -16,5 +20,5 @@ timsim-types = "0.1.0"
 # NOTICE (copyright + no-SDK + no-redistributed-data + SCIEX trademark disclaimer) and the README
 # provenance section, i.e. the full release hygiene thermorawfile already ships.
 #
-# Still on branch `feature/wiffscan-codec`, not main — settle that before the repo goes public.
+# Now merged to sciexwiff's default branch (master), so a visitor to that repo lands on the license.
 sciexwiff = { git = "https://github.com/theGreatHerrLebert/sciexwiff", rev = "c07d53092626ece26a241665679689efcac4bdb7" }
